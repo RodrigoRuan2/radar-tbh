@@ -38,6 +38,7 @@ quando o cooldown termina.
   um clique em "usar" adota a SUA média como cooldown daquele card
 - ✅ Tema **cyberpunk** responsivo: roxo neon como cor principal, ciano de
   contraste, fontes Orbitron/Rajdhani, brilhos neon e scanlines
+- ✅ Deploy no GitHub Pages
 
 ## Como rodar
 
