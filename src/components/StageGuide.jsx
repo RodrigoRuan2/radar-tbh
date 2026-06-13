@@ -113,11 +113,8 @@ function StageGuide() {
           </thead>
           <tbody>
             {fases.map((s) => (
-              <tr key={stageId(s)} className={s.is_act_boss ? 'stage-guide__row--boss' : undefined}>
-                <td>
-                  {stageName(s)}
-                  {s.is_act_boss && ' 👑'}
-                </td>
+              <tr key={stageId(s)}>
+                <td>{stageName(s)}</td>
                 <td>{difficultyName(s)}</td>
                 <td>
                   A{s.act}-{s.stage}

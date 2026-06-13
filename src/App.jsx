@@ -39,11 +39,17 @@ function App() {
   // O spread "{ padrões, ...t }" é uma migração leve: timers salvos por
   // versões antigas do app ganham os campos novos sem quebrar nada.
   const [timers, setTimers] = useState(() =>
-    loadFromStorage(STORAGE_TIMERS, []).map((t) => ({
-      lastDropAt: null,
-      customMs: null,
-      ...t,
-    }))
+    loadFromStorage(STORAGE_TIMERS, []).map((t) => {
+      const base = { lastDropAt: null, customMs: null, ...t }
+      // Se o timer aponta para uma fase que não é mais farmável (ex.: um
+      // chefe de ato salvo por uma versão antiga), repontamos para a
+      // melhor fase válida daquele nível.
+      const validos = stagesForLevel(base.chestLevel).map(stageId)
+      if (!validos.includes(base.stageId)) {
+        base.stageId = validos[0]
+      }
+      return base
+    })
   )
 
   // ID do card sendo arrastado no momento (null = ninguém arrastando)

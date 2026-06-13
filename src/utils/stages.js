@@ -5,9 +5,16 @@ import stages from '../data/stages.json'
 // Isso facilita manutenção — se o formato do JSON mudar um dia,
 // só este arquivo precisa ser ajustado.
 
+// Fases FARMÁVEIS: tiramos os CHEFES DE ATO (a fase 10 de cada ato, marcada
+// com is_act_boss). Elas têm 100% de drop, mas são lutas de chefe — não dá
+// para farmar repetidamente como nas fases normais. Por isso não entram em
+// nenhuma recomendação, seletor ou guia. Verificado: nenhum nível de baú
+// fica sem opção ao removê-las.
+const farmableStages = stages.filter((s) => !s.is_act_boss)
+
 // Lista de níveis de baú existentes no jogo (4, 5, 7, 15... 80).
 // O Set elimina repetições, já que várias fases dropam o mesmo nível.
-export const CHEST_LEVELS = [...new Set(stages.map((s) => s.boss_chest_level))].sort(
+export const CHEST_LEVELS = [...new Set(farmableStages.map((s) => s.boss_chest_level))].sort(
   (a, b) => a - b
 )
 
@@ -57,9 +64,9 @@ const DIFFICULTY_PT_BR = {
 // Ordem oficial de progressão das dificuldades (usada nos filtros).
 export const DIFFICULTIES = ['Normal', 'Nightmare', 'Hell', 'Torment']
 
-// Lista completa das 120 fases, na ordem de progressão do jogo.
+// Lista das fases farmáveis (sem os chefes de ato), na ordem do jogo.
 export function allStages() {
-  return stages
+  return farmableStages
 }
 
 // Nome da fase em português. O `?? stage.name` é uma rede de segurança:
@@ -83,7 +90,7 @@ export function stageId(stage) {
 // ordenadas da maior chance de drop para a menor.
 // Em caso de empate no %, vem primeiro a fase mais fácil (menor nível de inimigo).
 export function stagesForLevel(level) {
-  return stages
+  return farmableStages
     .filter((s) => s.boss_chest_level === level)
     .sort(
       (a, b) =>
