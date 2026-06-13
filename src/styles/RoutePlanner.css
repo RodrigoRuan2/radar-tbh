@@ -51,7 +51,7 @@
 }
 
 .route-planner__chip--on {
-  background: rgba(168, 85, 247, 0.18);
+  background: color-mix(in srgb, var(--cor-destaque) 18%, transparent);
   color: var(--cor-texto);
   border-color: var(--cor-destaque);
   box-shadow: var(--brilho-roxo);
@@ -85,7 +85,7 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, #7c3aed, var(--cor-destaque-2));
+  background: linear-gradient(135deg, var(--cor-grad-1), var(--cor-destaque-2));
   color: #fff;
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
@@ -118,6 +118,11 @@
   color: var(--cor-texto-suave);
 }
 
+.route-planner__warn {
+  font-size: 0.85rem;
+  color: var(--cor-perigo);
+}
+
 .route-planner__coverage {
   margin: 14px 0;
   font-size: 0.9rem;
@@ -127,7 +132,7 @@
 }
 
 .route-planner__create {
-  background: linear-gradient(90deg, #7c3aed, var(--cor-destaque-2));
+  background: linear-gradient(90deg, var(--cor-grad-1), var(--cor-destaque-2));
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;

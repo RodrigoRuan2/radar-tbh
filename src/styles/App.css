@@ -21,7 +21,7 @@
   letter-spacing: clamp(1px, 0.5vw, 3px);
   text-transform: uppercase;
   color: var(--cor-destaque);
-  text-shadow: 0 0 18px rgba(168, 85, 247, 0.6);
+  text-shadow: 0 0 18px color-mix(in srgb, var(--cor-destaque) 60%, transparent);
 }
 
 .app__subtitle {

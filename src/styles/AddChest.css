@@ -29,7 +29,7 @@
 /* Botão "vazado" neon: fundo transparente, borda e texto roxos.
    (o reset global tira a borda dos botões, então declaramos de novo) */
 .add-chest__button {
-  background: rgba(168, 85, 247, 0.08);
+  background: color-mix(in srgb, var(--cor-destaque) 8%, transparent);
   border: 1px solid var(--cor-destaque);
   color: var(--cor-destaque);
   font-weight: 700;
@@ -38,7 +38,7 @@
 }
 
 .add-chest__button:hover {
-  background: rgba(168, 85, 247, 0.2);
+  background: color-mix(in srgb, var(--cor-destaque) 20%, transparent);
 }
 
 .add-chest__done {

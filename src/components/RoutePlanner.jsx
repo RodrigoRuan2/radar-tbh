@@ -11,8 +11,11 @@ import '../styles/RoutePlanner.css'
 // mais fracos (clear mais rápido). O jogo não expõe o tempo de clear, então
 // usamos o nível dos inimigos como proxy de velocidade — honestidade > número
 // inventado.
-function RoutePlanner({ dropHistory, defaultMin, onCreateRoute }) {
+function RoutePlanner({ dropHistory, defaultMin, heroLevel, onCreateRoute }) {
   const [selected, setSelected] = useState([])
+
+  // Nível do herói como número (0 = não informado, então não filtramos nada).
+  const hl = Number(heroLevel) || 0
 
   // Liga/desliga um nível na seleção. Repare que NÃO mutamos o array:
   // criamos um novo a cada clique (filter/spread). Mutar o estado direto
@@ -28,10 +31,18 @@ function RoutePlanner({ dropHistory, defaultMin, onCreateRoute }) {
   const route = selected
     .map((level) => {
       const stages = stagesForLevel(level)
-      const best = stages[0] // maior % de drop (empate → inimigo mais fraco)
-      const fastest = [...stages].sort((a, b) => a.enemy_level - b.enemy_level)[0]
+      // Se o nível do herói foi informado, só consideramos fases que ele
+      // consegue clarear (inimigos <= nível do herói). Entre as clareáveis,
+      // a melhor é a de maior % de drop.
+      const clareaveis = hl > 0 ? stages.filter((s) => s.enemy_level <= hl) : stages
+      const best = clareaveis[0] ?? stages[0] // se nenhuma clareável, mostra a meta
+      const fastest = [...(clareaveis.length ? clareaveis : stages)].sort(
+        (a, b) => a.enemy_level - b.enemy_level
+      )[0]
       const avg = averageDropInterval(dropHistory[level])
-      return { level, best, fastest, avg }
+      // Herói baixo demais até para a fase mais fácil deste nível de baú
+      const tooHard = hl > 0 && clareaveis.length === 0
+      return { level, best, fastest, avg, tooHard }
     })
     .sort((a, b) => a.best.enemy_level - b.best.enemy_level)
 
@@ -42,6 +53,9 @@ function RoutePlanner({ dropHistory, defaultMin, onCreateRoute }) {
       <p className="route-planner__hint">
         Escolha os níveis de baú que quer farmar. O app sugere a melhor fase de cada um (maior
         chance de drop e clear mais rápido) e monta a rotação.
+        {hl > 0
+          ? ` Considerando o herói Lv ${hl}: fases com inimigos acima disso são marcadas como ainda difíceis.`
+          : ' Dica: preencha o "Nível do herói" nas configurações para avisar quais fases você ainda não clareia.'}
       </p>
 
       <div className="route-planner__levels">
@@ -87,6 +101,12 @@ function RoutePlanner({ dropHistory, defaultMin, onCreateRoute }) {
                         {item.fastest.enemy_level}, drop {item.fastest.boss_chest_drop_percent}%)
                       </span>
                     )}
+                  {item.tooHard && (
+                    <span className="route-planner__warn">
+                      ⚠ Seu herói (Lv {hl}) ainda não clareia esta fase (inimigos Lv{' '}
+                      {item.best.enemy_level}) — suba de nível antes.
+                    </span>
+                  )}
                 </div>
               </li>
             ))}

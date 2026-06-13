@@ -50,7 +50,7 @@
   position: absolute;
   inset: -1px;
   border-radius: 12px;
-  box-shadow: 0 0 22px rgba(0, 255, 200, 0.45);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--cor-pronto) 45%, transparent);
   pointer-events: none;
   animation: pulso-neon 2.2s ease-in-out infinite;
 }
@@ -183,12 +183,12 @@
   font-size: 2rem; /* Orbitron é larga; 2rem dela ocupa o mesmo que 2.4 da antiga */
   font-weight: 700;
   font-variant-numeric: tabular-nums; /* dígitos de largura fixa: o relógio não "treme" */
-  text-shadow: 0 0 16px rgba(168, 85, 247, 0.45);
+  text-shadow: 0 0 16px color-mix(in srgb, var(--cor-destaque) 45%, transparent);
 }
 
 .chest-card--ready .chest-card__time {
   color: var(--cor-pronto);
-  text-shadow: 0 0 16px rgba(0, 255, 200, 0.55);
+  text-shadow: 0 0 16px color-mix(in srgb, var(--cor-pronto) 55%, transparent);
 }
 
 /* Estilizando a <progress> nativa (precisa dos seletores com prefixo) */
@@ -227,7 +227,7 @@
 
 .chest-card__drop {
   flex: 1;
-  background: linear-gradient(90deg, #7c3aed, var(--cor-destaque-2));
+  background: linear-gradient(90deg, var(--cor-grad-1), var(--cor-destaque-2));
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;

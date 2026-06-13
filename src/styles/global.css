@@ -3,28 +3,64 @@
    arquivos CSS poderem reaproveitá-las. */
 
 :root {
-  /* Paleta cyberpunk: roxo neon como cor principal, ciano como
-     contraste secundário e verde-ciano para o estado "pronto". */
+  color-scheme: dark;
+}
+
+/* ===========================================================================
+   TEMAS
+   A paleta de cores vive em classes no <body> (tema-roxo / tema-cinza), em vez
+   de no :root. Trocar de tema = trocar a classe do body (feito no App.jsx).
+   Os componentes só usam as variáveis --cor-* — não sabem qual tema está ativo.
+   Os brilhos translúcidos são derivados da própria cor de destaque com
+   color-mix(), então se adaptam sozinhos ao tema.
+   =========================================================================== */
+
+/* ---- TEMA ROXO (cyberpunk, padrão) ---- */
+body.tema-roxo {
   --cor-fundo: #0a0714;
   --cor-superficie: #140e24;
   --cor-superficie-alta: #1f1538;
   --cor-borda: #3a2766;
   --cor-texto: #ece6fa;
-  --cor-texto-suave: #9d8cc2;
+  --cor-texto-suave: #b6a8d4;
   --cor-destaque: #a855f7; /* roxo neon principal */
   /* Magenta escurecido de propósito: texto branco sobre ele atinge
-     contraste ~6.3:1 (WCAG AA pede 4.5). O tom vivo anterior (#e145ff)
-     dava só ~3.2:1 na ponta do gradiente do botão principal. */
+     contraste ~6.3:1 (WCAG AA pede 4.5). */
   --cor-destaque-2: #a21caf;
+  --cor-grad-1: #7c3aed; /* início dos gradientes roxos */
   --cor-ciano: #00e5ff; /* neon secundário */
   --cor-pronto: #00ffc8; /* verde-ciano "baú disponível" */
   --cor-perigo: #ff2d6f;
+  --overlay-fundo-topo: rgba(10, 7, 20, 0.78);
+  --overlay-fundo-base: rgba(10, 7, 20, 0.93);
+  --img-fundo: url(../assets/bg-roxo.jpg);
+}
 
-  /* Brilhos neon reutilizáveis (box-shadow) */
-  --brilho-roxo: 0 0 14px rgba(168, 85, 247, 0.35);
-  --brilho-pronto: 0 0 14px rgba(0, 255, 200, 0.35);
+/* ---- TEMA CINZA (monocromático, sombrio) ---- */
+body.tema-cinza {
+  --cor-fundo: #0c0c0e;
+  --cor-superficie: #16161b;
+  --cor-superficie-alta: #21212a;
+  --cor-borda: #3c3c46;
+  --cor-texto: #ededf1;
+  --cor-texto-suave: #abacb6;
+  --cor-destaque: #c7c7d2; /* prata claro no lugar do roxo neon */
+  --cor-destaque-2: #7e7e8a;
+  --cor-grad-1: #6c6c78;
+  --cor-ciano: #cdd0d8;
+  --cor-pronto: #86e0bc; /* verde dessaturado: "pronto" ainda lê como positivo */
+  --cor-perigo: #e07682;
+  --overlay-fundo-topo: rgba(12, 12, 14, 0.80);
+  --overlay-fundo-base: rgba(12, 12, 14, 0.93);
+  --img-fundo: url(../assets/bg-cinza.jpg);
+}
 
-  color-scheme: dark;
+/* Brilhos reutilizáveis, derivados da cor de destaque do tema atual.
+   color-mix mistura a cor com "transparent" para criar versões translúcidas
+   sem precisar fixar um rgba — então mudam de cor junto com o tema. */
+body {
+  --brilho-roxo: 0 0 14px color-mix(in srgb, var(--cor-destaque) 38%, transparent);
+  --brilho-pronto: 0 0 14px color-mix(in srgb, var(--cor-pronto) 38%, transparent);
 }
 
 * {
@@ -33,18 +69,20 @@
 
 body {
   margin: 0;
-  /* Camadas de fundo: dois "fachos" de luz neon (roxo no alto,
-     ciano embaixo) por cima da cor base bem escura. */
-  background:
-    radial-gradient(1100px 600px at 85% -10%, rgba(168, 85, 247, 0.14), transparent 60%),
-    radial-gradient(900px 500px at -5% 110%, rgba(0, 229, 255, 0.08), transparent 60%),
-    var(--cor-fundo);
+  /* Imagem de fundo do tema, escurecida por um degradê por cima
+     (o overlay) para o conteúdo ficar legível. */
+  background-image: linear-gradient(var(--overlay-fundo-topo), var(--overlay-fundo-base)),
+    var(--img-fundo);
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
+  background-color: var(--cor-fundo);
   color: var(--cor-texto);
   font-family: 'Rajdhani', 'Segoe UI', system-ui, sans-serif;
   font-size: 1.05rem;
   font-weight: 500;
   line-height: 1.5;
+  transition: color 0.4s;
 }
 
 /* Scanlines: linhas horizontais finíssimas por cima de tudo,

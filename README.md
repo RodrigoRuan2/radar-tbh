@@ -28,16 +28,19 @@ quando o cooldown termina.
 - ✅ **Guia de fases**: tabela das 120 fases com chance de baú, filtros por
   dificuldade e nível, e busca por nome (com ou sem acento)
 - ✅ Nomes de fases e dificuldades traduzidos para pt-BR
-- ✅ **⏱ Tempo na fase**: contagem crescente de há quanto tempo você está na
-  fase (reinicia ao trocar de fase ou marcar um drop)
+- ✅ **⏱ Desde o último drop**: contagem crescente por card, começa só ao
+  clicar em "Baú dropou!" (mede o intervalo real de um baú ao outro)
 - ✅ **🗺️ Planejador de rota**: escolha os níveis de baú que quer farmar e o app
   sugere a melhor fase de cada um (maior chance de drop + clear mais rápido) e
   cria os cronômetros da rota com um clique
-- ✅ **⭐ Próximo da rotação**: destaque dourado no baú que fica pronto primeiro
+- ✅ **🦸 Recomendação por nível do herói**: informe seu nível e o planejador
+  avisa quais fases você ainda não clareia
+- ✅ **⭐ Próximo da rotação**: destaque no baú que fica pronto primeiro
 - ✅ **📊 Média real entre drops**: histórico persistido por nível de baú;
   um clique em "usar" adota a SUA média como cooldown daquele card
-- ✅ Tema **cyberpunk** responsivo: roxo neon como cor principal, ciano de
-  contraste, fontes Orbitron/Rajdhani, brilhos neon e scanlines
+- ✅ **Cards arrastáveis** para reordenar a rotação (drag-and-drop nativo)
+- ✅ **Dois temas com imagem de fundo**: roxo (cyberpunk) e cinza
+  (monocromático), trocáveis num clique; fontes Orbitron/Rajdhani
 - ✅ Deploy no GitHub Pages
 
 ## Como rodar

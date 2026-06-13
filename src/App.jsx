@@ -20,6 +20,8 @@ const DEFAULT_SETTINGS = {
   durationMin: 14, // cooldown médio observado pela comunidade (12–14 min)
   soundOn: true,
   volume: 0.5,
+  theme: 'roxo', // 'roxo' (cyberpunk) ou 'cinza' (monocromático)
+  heroLevel: '', // nível do herói; vazio = não filtra fases por nível
 }
 
 // Lê do localStorage com segurança: se o dado estiver corrompido
@@ -54,9 +56,13 @@ function App() {
 
   // ID do card sendo arrastado no momento (null = ninguém arrastando)
   const [dragId, setDragId] = useState(null)
-  const [settings, setSettings] = useState(() =>
-    loadFromStorage(STORAGE_SETTINGS, DEFAULT_SETTINGS)
-  )
+  // O spread "{ ...DEFAULT_SETTINGS, ...salvo }" garante que campos novos
+  // (tema, nível do herói) apareçam mesmo em configurações salvas por
+  // versões antigas, sem perder o que o usuário já tinha ajustado.
+  const [settings, setSettings] = useState(() => ({
+    ...DEFAULT_SETTINGS,
+    ...loadFromStorage(STORAGE_SETTINGS, {}),
+  }))
   const [events, setEvents] = useState([])
 
   // Histórico de drops por nível de baú: { "30": [timestamp, ...] }.
@@ -83,6 +89,14 @@ function App() {
   useEffect(() => {
     localStorage.setItem(STORAGE_DROPS, JSON.stringify(dropHistory))
   }, [dropHistory])
+
+  // Aplica o tema trocando a classe do <body>. O <body> não é renderizado
+  // pelo React (vive no index.html), então mexemos nele direto via efeito.
+  // O CSS (global.css) é quem define as cores e o fundo de cada classe.
+  useEffect(() => {
+    document.body.classList.remove('tema-roxo', 'tema-cinza')
+    document.body.classList.add(`tema-${settings.theme}`)
+  }, [settings.theme])
 
   function addEvent(text) {
     setEvents((prev) => [{ id: crypto.randomUUID(), at: Date.now(), text }, ...prev].slice(0, 20))
@@ -211,6 +225,7 @@ function App() {
       <RoutePlanner
         dropHistory={dropHistory}
         defaultMin={settings.durationMin}
+        heroLevel={settings.heroLevel}
         onCreateRoute={handleCreateRoute}
       />
       <AddChest usedLevels={usedLevels} onAdd={handleAdd} />

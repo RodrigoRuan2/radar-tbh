@@ -18,6 +18,19 @@ function SettingsBar({ settings, onChange, onResetAll }) {
         />
       </label>
 
+      <label className="settings__field">
+        Nível do herói
+        <input
+          className="settings__input"
+          type="number"
+          min="1"
+          max="120"
+          placeholder="opcional"
+          value={settings.heroLevel}
+          onChange={(e) => onChange({ ...settings, heroLevel: e.target.value })}
+        />
+      </label>
+
       <label className="settings__field settings__field--checkbox">
         <input
           type="checkbox"
@@ -39,6 +52,17 @@ function SettingsBar({ settings, onChange, onResetAll }) {
           onChange={(e) => onChange({ ...settings, volume: Number(e.target.value) })}
         />
       </label>
+
+      <button
+        type="button"
+        className="settings__button"
+        onClick={() =>
+          onChange({ ...settings, theme: settings.theme === 'roxo' ? 'cinza' : 'roxo' })
+        }
+        title="Alternar entre o tema roxo e o cinza"
+      >
+        {settings.theme === 'roxo' ? '🟣 Tema roxo' : '⚪ Tema cinza'}
+      </button>
 
       <button type="button" className="settings__button" onClick={() => playAlert(settings.volume)}>
         🔊 Testar som
