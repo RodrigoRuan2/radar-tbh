@@ -94,14 +94,27 @@ function App() {
     }
   }
 
+  // Um cronômetro por nível: o cooldown do baú de chefe é GLOBAL por nível
+  // no jogo (pegar um Lv 40 põe TODOS os Lv 40 em cooldown, não importa a
+  // fase). Por isso bloqueamos níveis repetidos — dois timers do mesmo nível
+  // dariam a falsa impressão de cooldowns independentes.
   function handleAdd(chestLevel) {
-    setTimers((prev) => [...prev, novoTimer(chestLevel)])
+    setTimers((prev) =>
+      prev.some((t) => t.chestLevel === chestLevel) ? prev : [...prev, novoTimer(chestLevel)]
+    )
   }
 
-  // Cria de uma vez os cronômetros de uma rota planejada.
-  // route = [{ level, stage }, ...] vindo do RoutePlanner.
+  // Cria os cronômetros de uma rota planejada, pulando níveis que já estão
+  // na tela (pra não duplicar). route = [{ level, stage }, ...].
   function handleCreateRoute(route) {
-    setTimers((prev) => [...prev, ...route.map((item) => novoTimer(item.level, stageId(item.stage)))])
+    setTimers((prev) => {
+      const jaExistem = new Set(prev.map((t) => t.chestLevel))
+      const novos = route
+        .filter((item) => !jaExistem.has(item.level))
+        .map((item) => novoTimer(item.level, stageId(item.stage)))
+      if (novos.length === 0) return prev
+      return [...prev, ...novos]
+    })
     addEvent(`Rota criada: ${route.map((item) => `Lv ${item.level}`).join(' → ')}`)
   }
 
@@ -148,14 +161,8 @@ function App() {
     setTimers((prev) => prev.map((t) => (t.id === id ? { ...t, customMs: ms } : t)))
   }
 
-  // Quando há mais de um baú do MESMO nível, numeramos os cards
-  // (nº 1, nº 2...) para diferenciar os cronômetros na tela.
-  // Isso é estado derivado: calculado a cada renderização, não guardado.
-  const totalPorNivel = {}
-  for (const t of timers) {
-    totalPorNivel[t.chestLevel] = (totalPorNivel[t.chestLevel] ?? 0) + 1
-  }
-  const vistosPorNivel = {}
+  // Níveis já na rotação — usado para o AddChest desabilitar repetidos.
+  const usedLevels = timers.map((t) => t.chestLevel)
 
   // Próximo da rotação: entre os cards que estão CONTANDO, qual fica
   // pronto primeiro? Também é estado derivado — recalculado a cada tick.
@@ -184,7 +191,7 @@ function App() {
         defaultMin={settings.durationMin}
         onCreateRoute={handleCreateRoute}
       />
-      <AddChest onAdd={handleAdd} />
+      <AddChest usedLevels={usedLevels} onAdd={handleAdd} />
 
       {timers.length === 0 ? (
         <p className="app__empty">
@@ -192,15 +199,10 @@ function App() {
         </p>
       ) : (
         <main className="app__grid">
-          {timers.map((timer) => {
-            vistosPorNivel[timer.chestLevel] = (vistosPorNivel[timer.chestLevel] ?? 0) + 1
-            const slot =
-              totalPorNivel[timer.chestLevel] > 1 ? vistosPorNivel[timer.chestLevel] : null
-            return (
+          {timers.map((timer) => (
             <ChestCard
               key={timer.id}
               timer={timer}
-              slot={slot}
               isNext={timer.id === nextId}
               average={averageDropInterval(dropHistory[timer.chestLevel])}
               onSetCustom={handleSetCustom}
@@ -212,8 +214,7 @@ function App() {
               onRemove={handleRemove}
               onChangeStage={handleChangeStage}
             />
-            )
-          })}
+          ))}
         </main>
       )}
 

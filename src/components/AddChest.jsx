@@ -3,14 +3,26 @@ import { CHEST_LEVELS } from '../utils/stages.js'
 import '../styles/AddChest.css'
 
 // Formulário para adicionar um novo card de baú.
-// É permitido repetir o mesmo nível: quem farma em mais de uma fase
-// (ou em mais de uma conta) pode querer dois cronômetros de Lv 30.
-function AddChest({ onAdd }) {
-  const [level, setLevel] = useState(CHEST_LEVELS[0])
+// Não permite repetir nível: o cooldown do baú de chefe é global por nível
+// no jogo, então dois timers do mesmo nível não fariam sentido. Os níveis
+// já em uso são filtrados da lista.
+function AddChest({ usedLevels, onAdd }) {
+  const available = CHEST_LEVELS.filter((lv) => !usedLevels.includes(lv))
+  const [level, setLevel] = useState(available[0] ?? CHEST_LEVELS[0])
+
+  // Se o nível escolhido acabou de ser adicionado, cai para o próximo livre.
+  const selected = available.includes(Number(level)) ? Number(level) : available[0]
 
   function handleSubmit(event) {
     event.preventDefault() // impede o recarregamento padrão da página
-    onAdd(Number(level))
+    if (selected === undefined) return
+    onAdd(selected)
+    const next = available.filter((lv) => lv !== selected)
+    setLevel(next[0] ?? CHEST_LEVELS[0])
+  }
+
+  if (available.length === 0) {
+    return <p className="add-chest__done">Todos os níveis de baú já estão na sua rotação. 🎉</p>
   }
 
   return (
@@ -19,10 +31,10 @@ function AddChest({ onAdd }) {
         Nível do baú
         <select
           className="add-chest__select"
-          value={level}
+          value={selected}
           onChange={(e) => setLevel(Number(e.target.value))}
         >
-          {CHEST_LEVELS.map((lv) => (
+          {available.map((lv) => (
             <option key={lv} value={lv}>
               Lv {lv}
             </option>

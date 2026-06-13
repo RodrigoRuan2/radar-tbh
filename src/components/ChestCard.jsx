@@ -13,7 +13,6 @@ import '../styles/ChestCard.css'
 // no localStorage em um lugar só.
 function ChestCard({
   timer,
-  slot,
   isNext,
   average,
   now,
@@ -54,7 +53,6 @@ function ChestCard({
       <header className="chest-card__header">
         <h2 className="chest-card__title">
           Baú Lv {timer.chestLevel}
-          {slot != null && ` · nº ${slot}`}
           {isNext && !isReady && <span className="chest-card__next-badge">⭐ próximo</span>}
         </h2>
         <button
