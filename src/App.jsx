@@ -5,6 +5,8 @@ import SettingsBar from './components/SettingsBar.jsx'
 import EventLog from './components/EventLog.jsx'
 import StageGuide from './components/StageGuide.jsx'
 import RoutePlanner from './components/RoutePlanner.jsx'
+import Updates from './components/Updates.jsx'
+import GameUpdates from './components/GameUpdates.jsx'
 import { useNow } from './hooks/useNow.js'
 import { stagesForLevel, stageId } from './utils/stages.js'
 import { averageDropInterval } from './utils/stats.js'
@@ -263,6 +265,8 @@ function App() {
       )}
 
       <StageGuide />
+      <Updates />
+      <GameUpdates />
       <EventLog events={events} />
 
       <footer className="app__footer">

@@ -1,0 +1,78 @@
+/* Seção de novidades (changelog), recolhível. */
+
+.updates {
+  margin-top: 16px;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 0 18px 8px;
+}
+
+.updates__summary {
+  cursor: pointer;
+  padding: 14px 0;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--cor-destaque);
+  list-style-position: inside;
+}
+
+.updates__summary:hover {
+  filter: brightness(1.2);
+}
+
+.updates__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.updates__entry {
+  /* Linha vertical à esquerda dá a sensação de "linha do tempo" */
+  border-left: 2px solid var(--cor-borda);
+  padding: 2px 0 2px 14px;
+}
+
+.updates__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.updates__date {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.8rem;
+  color: var(--cor-texto-suave);
+}
+
+.updates__title {
+  color: var(--cor-destaque);
+}
+
+/* Selo "novo" na atualização mais recente */
+.updates__badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: linear-gradient(90deg, var(--cor-grad-1), var(--cor-destaque-2));
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.updates__items {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+}
