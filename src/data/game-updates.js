@@ -4,16 +4,22 @@
 // da fonte oficial. Para atualizar, peça "atualiza as novidades do jogo".
 //
 // Fonte: https://store.steampowered.com/news/app/3678970
-// Última curadoria desta lista: 19/06/2026
+// Última curadoria desta lista: 20/06/2026
 
 export const GAME_UPDATE_SOURCE = 'https://store.steampowered.com/news/app/3678970'
-export const GAME_UPDATES_CURATED_AT = '19/06/2026'
+export const GAME_UPDATES_CURATED_AT = '20/06/2026'
 
 export const GAME_UPDATES = [
   {
+    date: '20/06/2026',
+    title: 'Manutenção de emergência do servidor',
+    novo: true,
+    summary:
+      'Um problema de segurança foi identificado no servidor e uma manutenção de emergência está em andamento. A equipe aplicará a correção e publicará um aviso separado quando terminar.',
+  },
+  {
     date: '19/06/2026',
     title: 'Hotfix (v1.00.16)',
-    novo: true,
     summary:
       'Correção de achievement: o troféu de "primeiro equipamento de alta qualidade" era desbloqueado ao obter qualquer item, não só equipamentos. Corrigido.',
   },
