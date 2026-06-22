@@ -12,8 +12,14 @@ export const GAME_UPDATES_CURATED_AT = '22/06/2026'
 export const GAME_UPDATES = [
   {
     date: '22/06/2026',
-    title: 'Hotfix (v1.00.18)',
+    title: 'Hotfix (v1.00.19)',
     novo: true,
+    summary:
+      'Corrigido o limite máximo de velocidade de movimento que estava sendo aplicado incorretamente.',
+  },
+  {
+    date: '22/06/2026',
+    title: 'Hotfix (v1.00.18)',
     summary:
       'Corrigido o caso em que as trocas de fase ficavam bloqueadas ao desafiar o chefe de ato várias vezes seguidas (ajuste do anticheat da v1.00.17, que estava pegando troca legítima). Também corrigida uma falha de segurança.',
   },
