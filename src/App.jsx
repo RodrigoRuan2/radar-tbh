@@ -294,10 +294,8 @@ function App() {
       <EventLog events={events} />
 
       <footer className="app__footer">
-        Dados das 120 fases extraídos do jogo · inspirado em{' '}
-        <a href="https://feroddev.github.io/tbh-codown/" target="_blank" rel="noreferrer">
-          tbh-codown
-        </a>
+        Dados das 120 fases extraídos do jogo · preços do Mercado Steam · projeto de fã, sem
+        vínculo oficial com o TBH
       </footer>
     </div>
   )

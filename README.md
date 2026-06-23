@@ -1,8 +1,8 @@
 # 📦 Localizador de Baú — TBH Timer
 
 
-Cronômetro de drop de baús para o jogo **TBH: Task Bar Hero** (Steam), inspirado no
-[tbh-codown](https://feroddev.github.io/tbh-codown/).
+Companion do jogo **TBH: Task Bar Hero** (Steam): acompanha os itens mais vendidos do
+Mercado Steam, cronômetro de drop de baús, guia das 120 fases e o meta atual.
 
 ## Como funciona o drop de baú no jogo
 
