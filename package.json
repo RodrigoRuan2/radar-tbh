@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/localizador-de-bau/",
+    "build": "vite build --base=/radar-tbh/",
     "preview": "vite preview",
     "mercado": "node scripts/coletar-mercado.mjs"
   },

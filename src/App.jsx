@@ -232,11 +232,11 @@ function App() {
           </button>
         </div>
         <h1 className="app__title">
-          <img className="app__title-icon" src={bauIcon} alt="" /> Localizador de Baú
+          <img className="app__title-icon" src={bauIcon} alt="" /> Radar TBH
         </h1>
         <p className="app__subtitle">
-          Cronômetro de drop de baús — TBH: Task Bar Hero. Quando um baú dropar, clique em
-          "Baú dropou!" e rotacione para outra fase enquanto o cooldown corre.
+          Acompanhe os itens mais vendidos do Mercado Steam e os cronômetros de drop de baús do
+          TBH: Task Bar Hero — tudo em um lugar.
         </p>
       </header>
 

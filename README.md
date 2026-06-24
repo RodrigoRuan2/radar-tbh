@@ -1,4 +1,4 @@
-# 📦 Localizador de Baú — TBH Timer
+# 📡 Radar TBH — Mercado e cronômetros de Task Bar Hero
 
 
 Companion do jogo **TBH: Task Bar Hero** (Steam): acompanha os itens mais vendidos do
