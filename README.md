@@ -4,6 +4,8 @@
 Companion do jogo **TBH: Task Bar Hero** (Steam): acompanha os itens mais vendidos do
 Mercado Steam, cronômetro de drop de baús, guia das 120 fases e o meta atual.
 
+🔗 **[Acesse ao vivo](https://rodrigoruan2.github.io/radar-tbh/)**
+
 ## Como funciona o drop de baú no jogo
 
 - O jogo tem **120 fases** (4 dificuldades × 3 atos × 10 fases). Cada fase dropa um
