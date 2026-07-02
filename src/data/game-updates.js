@@ -9,16 +9,41 @@
 //   - items: lista de tópicos, no mesmo espírito das notas oficiais (opcional)
 //
 // Fonte: https://store.steampowered.com/news/app/3678970
-// Última curadoria desta lista: 30/06/2026
+// Última curadoria desta lista: 02/07/2026
 
 export const GAME_UPDATE_SOURCE = 'https://store.steampowered.com/news/app/3678970'
-export const GAME_UPDATES_CURATED_AT = '30/06/2026'
+export const GAME_UPDATES_CURATED_AT = '02/07/2026'
 
 export const GAME_UPDATES = [
   {
+    date: '02/07/2026',
+    title: 'Hotfix (v1.00.23)',
+    novo: true,
+    items: [
+      'Classes de DLC podiam ser usadas sem comprar a DLC, e a informação de compra era resetada ao reconectar — corrigido.',
+      'Título "Compensação por Indisponibilidade do Servidor" não aparecia no topo do pop-up de compensação em alguns idiomas — corrigido.',
+    ],
+  },
+  {
+    date: '02/07/2026',
+    title: 'Compensação pela instabilidade + novidades (v1.00.22)',
+    intro:
+      'Update que habilita receber a compensação pela instabilidade do servidor — é preciso atualizar para a v1.00.22 para recebê-la. A entrega das 10 moedas/dia (70 no total, ao longo de 7 dias) começa em 02/07 e cai na Caixa de Correio diariamente entre 16h e 20h (KST), de forma escalonada, então o horário exato varia por jogador. As recompensas ficam na aba "Recompensas" da Caixa de Correio e podem ser resgatadas até 01/08 às 00h30 (KST) — o que não for resgatado some.',
+    items: [
+      'Novidade: Caixa de Correio agora separada em duas abas — "Geral" (itens comprados no Mercado, itens perdidos etc.) e "Recompensas" (enviadas pelos desenvolvedores).',
+      'Novidade: novo DLC que aumenta em até 5 os slots do Navio Comercial.',
+      'Novidade: no Cubo, o nível exigido para aprender a receita de Oferta caiu de 20 para 10.',
+      'No Inferno (Hell) ou acima, unidades ignoravam os monstros e corriam à frente ao avançar de fase após o chefe da 2-10 — corrigido.',
+      'No Inferno ou acima, ao repetir a fase 2-10, os heróis às vezes paravam de se mover — corrigido.',
+      'Item comprado no Mercado com tempo de "não-negociável" restante agora repassa esse tempo ao item resultante de síntese, craft, recompensa etc.',
+      'Item com restrição de venda agora mostra o tempo de venda disponível ao ser registrado no Navio Comercial.',
+      'Achievement do Navio Comercial não completava ao registrar um item — corrigido.',
+      'Erros de servidor agora exibem uma mensagem com código mais detalhado no pop-up.',
+    ],
+  },
+  {
     date: '30/06/2026',
     title: 'Desculpas e compensação para todos os jogadores',
-    novo: true,
     intro:
       'A equipe pediu desculpas pelos atrasos de conexão e instabilidades do último mês desde o lançamento e vai compensar todos os jogadores com moedas comemorativas.',
     items: [
