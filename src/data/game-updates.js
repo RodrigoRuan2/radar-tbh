@@ -9,16 +9,32 @@
 //   - items: lista de tópicos, no mesmo espírito das notas oficiais (opcional)
 //
 // Fonte: https://store.steampowered.com/news/app/3678970
-// Última curadoria desta lista: 02/07/2026
+// Última curadoria desta lista: 04/07/2026
 
 export const GAME_UPDATE_SOURCE = 'https://store.steampowered.com/news/app/3678970'
-export const GAME_UPDATES_CURATED_AT = '02/07/2026'
+export const GAME_UPDATES_CURATED_AT = '04/07/2026'
 
 export const GAME_UPDATES = [
   {
+    date: '04/07/2026',
+    title: 'Hotfix (v1.00.25)',
+    novo: true,
+    items: [
+      'Para reduzir a carga no servidor de correio, foi aplicada uma espera de 1 minuto entre pedidos repetidos de coleta de correio.',
+    ],
+  },
+  {
+    date: '03/07/2026',
+    title: 'Hotfix (v1.00.24)',
+    intro:
+      '⏱️ Relevante para este app: o jogo reduziu levemente o cooldown mínimo de aquisição dos baús. O tempo padrão do cronômetro (14 min) é uma estimativa da comunidade — se você perceber que o intervalo real ficou menor, ajuste o cooldown do card ou use a média real dos seus drops.',
+    items: [
+      'Reduzido levemente o cooldown mínimo de aquisição dos Baús Comuns e dos Baús de Fase, em todas as fases.',
+    ],
+  },
+  {
     date: '02/07/2026',
     title: 'Hotfix (v1.00.23)',
-    novo: true,
     items: [
       'Classes de DLC podiam ser usadas sem comprar a DLC, e a informação de compra era resetada ao reconectar — corrigido.',
       'Título "Compensação por Indisponibilidade do Servidor" não aparecia no topo do pop-up de compensação em alguns idiomas — corrigido.',
