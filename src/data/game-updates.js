@@ -9,16 +9,28 @@
 //   - items: lista de tópicos, no mesmo espírito das notas oficiais (opcional)
 //
 // Fonte: https://store.steampowered.com/news/app/3678970
-// Última curadoria desta lista: 04/07/2026
+// Última curadoria desta lista: 06/07/2026
 
 export const GAME_UPDATE_SOURCE = 'https://store.steampowered.com/news/app/3678970'
-export const GAME_UPDATES_CURATED_AT = '04/07/2026'
+export const GAME_UPDATES_CURATED_AT = '06/07/2026'
 
 export const GAME_UPDATES = [
   {
+    date: '06/07/2026',
+    title: 'Punições adicionais a cheaters: 20.406 contas',
+    novo: true,
+    intro:
+      'Nova leva de punições: a equipe revisou a atividade de trapaça pelos dados do servidor e puniu mais 20.406 contas confirmadas. Conforme o tipo e a gravidade do caso, foi aplicada restrição de acesso ao jogo ou restrição no Mercado Steam. Quem acredita ter sido punido injustamente pode recorrer por um formulário oficial.',
+    items: [
+      'Alvo: quem criou ou obteve itens por métodos anormais.',
+      'Alvo: quem usou programas ilegais ou explorou o sistema do jogo para vantagem injusta.',
+      'Mercado: a negociação de equipamentos de grade alta só será liberada após mais estabilidade — a data será anunciada depois.',
+      'O roadmap de desenvolvimento será revelado ainda esta semana.',
+    ],
+  },
+  {
     date: '04/07/2026',
     title: 'Hotfix (v1.00.25)',
-    novo: true,
     items: [
       'Para reduzir a carga no servidor de correio, foi aplicada uma espera de 1 minuto entre pedidos repetidos de coleta de correio.',
     ],
