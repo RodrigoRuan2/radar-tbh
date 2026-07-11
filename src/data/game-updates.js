@@ -9,16 +9,54 @@
 //   - items: lista de tópicos, no mesmo espírito das notas oficiais (opcional)
 //
 // Fonte: https://store.steampowered.com/news/app/3678970
-// Última curadoria desta lista: 06/07/2026
+// Última curadoria desta lista: 11/07/2026
 
 export const GAME_UPDATE_SOURCE = 'https://store.steampowered.com/news/app/3678970'
-export const GAME_UPDATES_CURATED_AT = '06/07/2026'
+export const GAME_UPDATES_CURATED_AT = '11/07/2026'
 
 export const GAME_UPDATES = [
   {
+    date: '10/07/2026',
+    title: 'Roadmap de desenvolvimento (Q3 2026)',
+    novo: true,
+    intro:
+      'A equipe divulgou o roadmap do Q3 2026 e o status das questões mais perguntadas pela comunidade. Alguns pontos são relevantes para quem farma:',
+    items: [
+      'Itens/save não salvando: como o jogo salva na nuvem, fechar à força ou queda de conexão pode perder dados — feche o jogo normalmente. Estão desenvolvendo backup de servidor, recuperação de save e mais estabilidade, lançados em etapas ao longo de um mês.',
+      'Compensação não recebida: alguns jogadores não conseguiram receber; há um formulário para reportar com o Steam ID e receber conforme a análise dos logs.',
+      'Mercado Steam: as restrições de listagem dos 3 grades mais altos (Cosmic, Divine, Celestial) devem ser retiradas ainda em julho, após uma revisão final de estabilidade.',
+      'Balanceamento: a equipe reconheceu o feedback de que certos metas de personagem ficaram dominantes demais e estuda ajustes, além de melhorias em progressão/farming e em stats pouco usados.',
+      'O detalhamento do Q3 2026 veio em imagens de roadmap no post oficial (não traduzíveis aqui) — veja na fonte.',
+    ],
+  },
+  {
+    date: '10/07/2026',
+    title: 'Hotfix (v1.00.27)',
+    items: [
+      'Velocidade de movimento diminuía ao encontrar monstros com um time só de heróis à distância — corrigido.',
+      'Aquisição de item era bloqueada mesmo sem ter estourado o limite de posse — corrigido.',
+    ],
+  },
+  {
+    date: '10/07/2026',
+    title: 'Hotfix (v1.00.26)',
+    intro:
+      'Inclui mudanças relacionadas ao servidor, então pode haver fila de até ~20 min após atualizar.',
+    items: [
+      'Atualizar a Caixa de Correio causava problemas ao coletar correio já confirmado — corrigido.',
+      'Em alta velocidade de movimento, o personagem atravessava monstros de forma intermitente, travando o jogo — corrigido.',
+      'Se o jogo fechasse de forma anormal durante Decoração / Gravação / Inscrição, o processo não era feito mas os materiais eram consumidos — corrigido.',
+      'Valor de EXP de recompensa exibido incorretamente ao receber Recompensas Offline após o nível 101 — corrigido.',
+      'Imagem da flecha do Rapid Fire aparecia invertida — corrigida.',
+      'Ao trocar receitas de craft no Cubo, a informação dos materiais às vezes aparecia incorreta — corrigido.',
+      'Texto e código de erro no login do servidor revisados para identificar melhor a causa de um problema.',
+      'Itens adulterados de forma anormal agora são deletados.',
+      'Corrigida uma falha de segurança relacionada à obtenção de baús.',
+    ],
+  },
+  {
     date: '06/07/2026',
     title: 'Punições adicionais a cheaters: 20.406 contas',
-    novo: true,
     intro:
       'Nova leva de punições: a equipe revisou a atividade de trapaça pelos dados do servidor e puniu mais 20.406 contas confirmadas. Conforme o tipo e a gravidade do caso, foi aplicada restrição de acesso ao jogo ou restrição no Mercado Steam. Quem acredita ter sido punido injustamente pode recorrer por um formulário oficial.',
     items: [
