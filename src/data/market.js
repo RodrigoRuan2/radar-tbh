@@ -6,7 +6,7 @@
 // limit. O app apenas lê este arquivo.
 
 export const MARKET_SOURCE = 'https://steamcommunity.com/market/search/?appid=3678970'
-export const MARKET_COLLECTED_AT = "14/11/2026, 23:45:39"
+export const MARKET_COLLECTED_AT = "15/11/2026, 14:48:05"
 export const MARKET_CURRENCY = "R$"
 
 export const MARKET_TABS = [
@@ -15,22 +15,22 @@ export const MARKET_TABS = [
     "titulo": "Mais vendidos",
     "itens": [
       {
-        "nome": "Soulstone - Torment",
-        "hash": "Soulstone - Torment",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEQ8yUekzqKcHyTvp7Ey",
-        "categoria": "soulstone",
-        "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,16",
-        "volume24h": 1138
-      },
-      {
         "nome": "Dice",
         "hash": "Dice",
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTE84yUejzqKcH2xBhXA3",
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 860
+        "precoMediano": "R$ 0,17",
+        "volume24h": 792
+      },
+      {
+        "nome": "Soulstone - Torment",
+        "hash": "Soulstone - Torment",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEQ8yUekzqKcHyTvp7Ey",
+        "categoria": "soulstone",
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,17",
+        "volume24h": 758
       },
       {
         "nome": "Arcane Crystal",
@@ -39,7 +39,7 @@ export const MARKET_TABS = [
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
         "precoMediano": "R$ 0,19",
-        "volume24h": 543
+        "volume24h": 519
       },
       {
         "nome": "Soulstone - Normal",
@@ -47,17 +47,17 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEQ8yUehzqKcH5CC7Jxm",
         "categoria": "soulstone",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,18",
-        "volume24h": 340
+        "precoMediano": "R$ 0,16",
+        "volume24h": 493
       },
       {
-        "nome": "Soulstone - Hell",
-        "hash": "Soulstone - Hell",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEQ8yUejzqKcH19gLfqH",
-        "categoria": "soulstone",
+        "nome": "Abyss Amulet (Immortal) C",
+        "hash": "Abyss Amulet (Immortal) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItAUNxQKSI6yUeg0evcCPhXAZGs_zY",
+        "categoria": "acessorios",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 144
+        "precoMediano": "R$ 0,17",
+        "volume24h": 302
       },
       {
         "nome": "Diamond",
@@ -65,8 +65,26 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUehzqKcHyyb1pX1",
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,19",
+        "volume24h": 224
+      },
+      {
+        "nome": "Eternal Sword (Immortal) C",
+        "hash": "Eternal Sword (Immortal) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsJlaSsJRIk48yUeh2fyCFvHrP87aww",
+        "categoria": "equipamentos",
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,17",
+        "volume24h": 183
+      },
+      {
+        "nome": "Lapis Lazuli",
+        "hash": "Lapis Lazuli",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUejzqKcH1P7M0MP",
+        "categoria": "materiais",
+        "menorPreco": "R$ 0,18",
         "precoMediano": "R$ 0,18",
-        "volume24h": 143
+        "volume24h": 138
       },
       {
         "nome": "Abyss Ring (Legendary) C",
@@ -75,25 +93,25 @@ export const MARKET_TABS = [
         "categoria": "acessorios",
         "menorPreco": "R$ 0,18",
         "precoMediano": "R$ 0,18",
-        "volume24h": 135
+        "volume24h": 134
       },
       {
-        "nome": "Abyss Ring (Immortal) C",
-        "hash": "Abyss Ring (Immortal) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsJhES9dKS088yUapzqKcH0PDxNjA",
-        "categoria": "acessorios",
+        "nome": "Opal",
+        "hash": "Opal",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUeizqKcH3lQRqrM",
+        "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,17",
-        "volume24h": 115
+        "precoMediano": "R$ 0,33",
+        "volume24h": 86
       },
       {
-        "nome": "Abyss Amulet (Immortal) C",
-        "hash": "Abyss Amulet (Immortal) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItAUNxQKSI6yUeg0evcCPhXAZGs_zY",
-        "categoria": "acessorios",
+        "nome": "Black Pearl",
+        "hash": "Black Pearl",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUekzqKcH990Y8xz",
+        "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,42",
-        "volume24h": 107
+        "precoMediano": "R$ 0,18",
+        "volume24h": 69
       },
       {
         "nome": "Soulstone - Nightmare",
@@ -102,43 +120,7 @@ export const MARKET_TABS = [
         "categoria": "soulstone",
         "menorPreco": "R$ 0,18",
         "precoMediano": "R$ 0,19",
-        "volume24h": 103
-      },
-      {
-        "nome": "Lapis Lazuli",
-        "hash": "Lapis Lazuli",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUejzqKcH1P7M0MP",
-        "categoria": "materiais",
-        "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 96
-      },
-      {
-        "nome": "Black Pearl",
-        "hash": "Black Pearl",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUekzqKcH990Y8xz",
-        "categoria": "materiais",
-        "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,12",
-        "volume24h": 88
-      },
-      {
-        "nome": "Opal",
-        "hash": "Opal",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUeizqKcH3lQRqrM",
-        "categoria": "materiais",
-        "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 78
-      },
-      {
-        "nome": "Amethyst",
-        "hash": "Amethyst",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw-yUelzqKcH7ua2ZYv",
-        "categoria": "materiais",
-        "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 72
+        "volume24h": 35
       },
       {
         "nome": "Abyss Earring (Immortal) C",
@@ -147,7 +129,25 @@ export const MARKET_TABS = [
         "categoria": "acessorios",
         "menorPreco": "R$ 0,18",
         "precoMediano": "R$ 0,22",
-        "volume24h": 64
+        "volume24h": 31
+      },
+      {
+        "nome": "Abyss Ring (Immortal) C",
+        "hash": "Abyss Ring (Immortal) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsJhES9dKS088yUapzqKcH0PDxNjA",
+        "categoria": "acessorios",
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,22",
+        "volume24h": 21
+      },
+      {
+        "nome": "Minor Ruby",
+        "hash": "Minor Ruby",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw8yUehzqKcH8X1Pc4b",
+        "categoria": "materiais",
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,13",
+        "volume24h": 19
       }
     ]
   },
@@ -161,8 +161,8 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTE84yUejzqKcH2xBhXA3",
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 860
+        "precoMediano": "R$ 0,17",
+        "volume24h": 792
       },
       {
         "nome": "Arcane Crystal",
@@ -171,7 +171,7 @@ export const MARKET_TABS = [
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
         "precoMediano": "R$ 0,19",
-        "volume24h": 543
+        "volume24h": 519
       },
       {
         "nome": "Diamond",
@@ -179,8 +179,8 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUehzqKcHyyb1pX1",
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,18",
-        "volume24h": 143
+        "precoMediano": "R$ 0,19",
+        "volume24h": 224
       },
       {
         "nome": "Lapis Lazuli",
@@ -188,17 +188,8 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUejzqKcH1P7M0MP",
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 96
-      },
-      {
-        "nome": "Black Pearl",
-        "hash": "Black Pearl",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUekzqKcH990Y8xz",
-        "categoria": "materiais",
-        "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,12",
-        "volume24h": 88
+        "precoMediano": "R$ 0,18",
+        "volume24h": 138
       },
       {
         "nome": "Opal",
@@ -206,17 +197,26 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUeizqKcH3lQRqrM",
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 78
+        "precoMediano": "R$ 0,33",
+        "volume24h": 86
       },
       {
-        "nome": "Amethyst",
-        "hash": "Amethyst",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw-yUelzqKcH7ua2ZYv",
+        "nome": "Black Pearl",
+        "hash": "Black Pearl",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw4yUekzqKcH990Y8xz",
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 72
+        "precoMediano": "R$ 0,18",
+        "volume24h": 69
+      },
+      {
+        "nome": "Minor Ruby",
+        "hash": "Minor Ruby",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw8yUehzqKcH8X1Pc4b",
+        "categoria": "materiais",
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,13",
+        "volume24h": 19
       },
       {
         "nome": "Stardust Ingot",
@@ -224,17 +224,17 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEk_yUehzqKcH4B_KzXB",
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,18",
-        "volume24h": 22
+        "precoMediano": "R$ 0,22",
+        "volume24h": 18
       },
       {
-        "nome": "Bronze Ingot",
-        "hash": "Bronze Ingot",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEk9yUehzqKcH9Q6J038",
+        "nome": "Amethyst",
+        "hash": "Amethyst",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw-yUelzqKcH7ua2ZYv",
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,18",
-        "volume24h": 22
+        "precoMediano": "R$ 0,38",
+        "volume24h": 17
       },
       {
         "nome": "Minor Sapphire",
@@ -242,8 +242,8 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEw8yUeizqKcH3jdtwGa",
         "categoria": "materiais",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,52",
-        "volume24h": 7
+        "precoMediano": "R$ 0,13",
+        "volume24h": 15
       }
     ]
   },
@@ -252,31 +252,22 @@ export const MARKET_TABS = [
     "titulo": "Acessórios",
     "itens": [
       {
+        "nome": "Abyss Amulet (Immortal) C",
+        "hash": "Abyss Amulet (Immortal) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItAUNxQKSI6yUeg0evcCPhXAZGs_zY",
+        "categoria": "acessorios",
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,17",
+        "volume24h": 302
+      },
+      {
         "nome": "Abyss Ring (Legendary) C",
         "hash": "Abyss Ring (Legendary) C",
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsJhES9dKS088yUapzqKcH0PDxNjA",
         "categoria": "acessorios",
         "menorPreco": "R$ 0,18",
         "precoMediano": "R$ 0,18",
-        "volume24h": 135
-      },
-      {
-        "nome": "Abyss Ring (Immortal) C",
-        "hash": "Abyss Ring (Immortal) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsJhES9dKS088yUapzqKcH0PDxNjA",
-        "categoria": "acessorios",
-        "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,17",
-        "volume24h": 115
-      },
-      {
-        "nome": "Abyss Amulet (Immortal) C",
-        "hash": "Abyss Amulet (Immortal) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItAUNxQKSI6yUeg0evcCPhXAZGs_zY",
-        "categoria": "acessorios",
-        "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,42",
-        "volume24h": 107
+        "volume24h": 134
       },
       {
         "nome": "Abyss Earring (Immortal) C",
@@ -285,7 +276,25 @@ export const MARKET_TABS = [
         "categoria": "acessorios",
         "menorPreco": "R$ 0,18",
         "precoMediano": "R$ 0,22",
-        "volume24h": 64
+        "volume24h": 31
+      },
+      {
+        "nome": "Abyss Ring (Immortal) C",
+        "hash": "Abyss Ring (Immortal) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsJhES9dKS088yUapzqKcH0PDxNjA",
+        "categoria": "acessorios",
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,22",
+        "volume24h": 21
+      },
+      {
+        "nome": "Abyss Earring (Legendary) C",
+        "hash": "Abyss Earring (Legendary) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsI9MV9lbOiI6yEeg0evcCPhXPTn5It4",
+        "categoria": "acessorios",
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,18",
+        "volume24h": 16
       },
       {
         "nome": "Abyss Bracer (Immortal) C",
@@ -294,16 +303,7 @@ export const MARKET_TABS = [
         "categoria": "acessorios",
         "menorPreco": "R$ 0,18",
         "precoMediano": "R$ 0,22",
-        "volume24h": 12
-      },
-      {
-        "nome": "Abyss Earring (Legendary) C",
-        "hash": "Abyss Earring (Legendary) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsI9MV9lbOiI6yEeg0evcCPhXPTn5It4",
-        "categoria": "acessorios",
-        "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 6
+        "volume24h": 15
       },
       {
         "nome": "Abyss Bracer (Legendary) C",
@@ -312,16 +312,16 @@ export const MARKET_TABS = [
         "categoria": "acessorios",
         "menorPreco": "R$ 0,18",
         "precoMediano": "R$ 0,18",
-        "volume24h": 4
+        "volume24h": 5
       },
       {
-        "nome": "Ethereal Amulet (Divine) A",
-        "hash": "Ethereal Amulet (Divine) A",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItAUNxQKSI6yUeg0eXcCPhXIpdM5WI",
+        "nome": "Abyss Bracer (Celestial) C",
+        "hash": "Abyss Bracer (Celestial) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhfRNNQLyI6ykeg0evcCPhXJWKNIMs",
         "categoria": "acessorios",
-        "menorPreco": "R$ 156,45",
-        "precoMediano": "R$ 58,95",
-        "volume24h": 3
+        "menorPreco": "R$ 117,99",
+        "precoMediano": "R$ 118,97",
+        "volume24h": 4
       },
       {
         "nome": "Abyss Amulet (Legendary) C",
@@ -329,8 +329,8 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItAUNxQKSI6yUeg0evcCPhXAZGs_zY",
         "categoria": "acessorios",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,19",
-        "volume24h": 2
+        "precoMediano": "R$ 0,18",
+        "volume24h": 3
       },
       {
         "nome": "Ethereal Ring (Cosmic) A",
@@ -348,22 +348,13 @@ export const MARKET_TABS = [
     "titulo": "Equipamentos",
     "itens": [
       {
-        "nome": "Eternal Gloves (Immortal) C",
-        "hash": "Eternal Gloves (Immortal) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsI1BSsZQLiI5y0eg0evcCPhX7lpE4PE",
+        "nome": "Eternal Sword (Immortal) C",
+        "hash": "Eternal Sword (Immortal) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsJlaSsJRIk48yUeh2fyCFvHrP87aww",
         "categoria": "equipamentos",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,18",
-        "volume24h": 41
-      },
-      {
-        "nome": "Eternal Bow (Immortal) C",
-        "hash": "Eternal Bow (Immortal) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhCUs8mTE08yE6-kLyVX7KEiz0",
-        "categoria": "equipamentos",
-        "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,18",
-        "volume24h": 5
+        "precoMediano": "R$ 0,17",
+        "volume24h": 183
       },
       {
         "nome": "Eternal Armor (Immortal) C",
@@ -371,17 +362,17 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItfSN9HIkg9yUeh2fyCFvHt71LUng",
         "categoria": "equipamentos",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,38",
-        "volume24h": 5
+        "precoMediano": "R$ 0,17",
+        "volume24h": 10
       },
       {
-        "nome": "Eternal Axe (Divine) C",
-        "hash": "Eternal Axe (Divine) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItVQM8mSE08yE6-kLyV75ZCseY",
+        "nome": "Eternal Bow (Immortal) C",
+        "hash": "Eternal Bow (Immortal) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhCUs8mTE08yE6-kLyVX7KEiz0",
         "categoria": "equipamentos",
-        "menorPreco": "R$ 168,75",
-        "precoMediano": "R$ 138,99",
-        "volume24h": 4
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,17",
+        "volume24h": 5
       },
       {
         "nome": "Eternal Helmet (Immortal) C",
@@ -389,8 +380,17 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIJISd1QKSI5yUeg0evcCPhXEUHC_LM",
         "categoria": "equipamentos",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,38",
-        "volume24h": 3
+        "precoMediano": "R$ 0,17",
+        "volume24h": 5
+      },
+      {
+        "nome": "Eternal Boots (Immortal) C",
+        "hash": "Eternal Boots (Immortal) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhCSsRGIkg_yUeh2fyCFvGRjTgpZQ",
+        "categoria": "equipamentos",
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,17",
+        "volume24h": 5
       },
       {
         "nome": "Eternal Gloves (Legendary) C",
@@ -398,43 +398,43 @@ export const MARKET_TABS = [
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsI1BSsZQLiI5y0eg0evcCPhX7lpE4PE",
         "categoria": "equipamentos",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,33",
-        "volume24h": 3
+        "precoMediano": "R$ 0,17",
+        "volume24h": 4
       },
       {
         "nome": "Eternal Armor (Cosmic) C",
         "hash": "Eternal Armor (Cosmic) C",
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItfSN9HIkg9yUeh2fyCFvHt71LUng",
         "categoria": "equipamentos",
-        "menorPreco": "R$ 126,19",
-        "precoMediano": "R$ 68,92",
+        "menorPreco": "R$ 119,80",
+        "precoMediano": "R$ 119,86",
+        "volume24h": 4
+      },
+      {
+        "nome": "Eternal Gloves (Immortal) C",
+        "hash": "Eternal Gloves (Immortal) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsI1BSsZQLiI5y0eg0evcCPhX7lpE4PE",
+        "categoria": "equipamentos",
+        "menorPreco": "R$ 0,18",
+        "precoMediano": "R$ 0,17",
         "volume24h": 3
       },
       {
-        "nome": "Eternal Sword (Immortal) C",
-        "hash": "Eternal Sword (Immortal) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsJlaSsJRIk48yUeh2fyCFvHrP87aww",
+        "nome": "Eternal Axe (Divine) C",
+        "hash": "Eternal Axe (Divine) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItVQM8mSE08yE6-kLyV75ZCseY",
+        "categoria": "equipamentos",
+        "menorPreco": "R$ 158,44",
+        "precoMediano": "R$ 166,91",
+        "volume24h": 3
+      },
+      {
+        "nome": "Eternal Boots (Legendary) C",
+        "hash": "Eternal Boots (Legendary) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhCSsRGIkg_yUeh2fyCFvGRjTgpZQ",
         "categoria": "equipamentos",
         "menorPreco": "R$ 0,18",
-        "precoMediano": "R$ 0,28",
-        "volume24h": 2
-      },
-      {
-        "nome": "Fighter's Helmet (Cosmic) A",
-        "hash": "Fighter's Helmet (Cosmic) A",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIJISd1QKSI5yUeg0ebcCPhXUXZJcBI",
-        "categoria": "equipamentos",
-        "menorPreco": "R$ 679,67",
-        "precoMediano": "R$ 303,37",
-        "volume24h": 2
-      },
-      {
-        "nome": "Eternal Bow (Cosmic) C",
-        "hash": "Eternal Bow (Cosmic) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhCUs8mTE08yE6-kLyVX7KEiz0",
-        "categoria": "equipamentos",
-        "menorPreco": "R$ 226,62",
-        "precoMediano": "R$ 146,67",
+        "precoMediano": "R$ 0,18",
         "volume24h": 2
       }
     ]
@@ -471,15 +471,6 @@ export const MARKET_TABS = [
         "volume24h": 1
       },
       {
-        "nome": "Eternal Axe (Cosmic) C",
-        "hash": "Eternal Axe (Cosmic) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItVQM8mSE08yE6-kLyV75ZCseY",
-        "categoria": "equipamentos",
-        "menorPreco": "R$ 310,21",
-        "precoMediano": "R$ 221,18",
-        "volume24h": 1
-      },
-      {
         "nome": "Eternal Crossbow (Cosmic) C",
         "hash": "Eternal Crossbow (Cosmic) C",
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIlfSsNGPzJbpkSk0OLDQbhANiYNnbuNSA",
@@ -489,49 +480,49 @@ export const MARKET_TABS = [
         "volume24h": 1
       },
       {
-        "nome": "Eternal Bow (Cosmic) C",
-        "hash": "Eternal Bow (Cosmic) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhCUs8mTE08yE6-kLyVX7KEiz0",
-        "categoria": "equipamentos",
-        "menorPreco": "R$ 226,62",
-        "precoMediano": "R$ 146,67",
-        "volume24h": 2
-      },
-      {
         "nome": "Eternal Axe (Divine) C",
         "hash": "Eternal Axe (Divine) C",
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItVQM8mSE08yE6-kLyV75ZCseY",
         "categoria": "equipamentos",
-        "menorPreco": "R$ 168,75",
-        "precoMediano": "R$ 138,99",
-        "volume24h": 4
+        "menorPreco": "R$ 158,44",
+        "precoMediano": "R$ 166,91",
+        "volume24h": 3
       },
       {
-        "nome": "Emerald Bracer (Divine) A",
-        "hash": "Emerald Bracer (Divine) A",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhfRNNQLyI6ykeg0ePcCPhXWrmmDA4",
-        "categoria": "acessorios",
-        "menorPreco": "R$ 133,55",
-        "precoMediano": "R$ 132,87",
-        "volume24h": 1
+        "nome": "Eternal Bow (Cosmic) C",
+        "hash": "Eternal Bow (Cosmic) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhCUs8mTE08yE6-kLyVX7KEiz0",
+        "categoria": "equipamentos",
+        "menorPreco": "R$ 222,14",
+        "precoMediano": "R$ 146,67",
+        "volume24h": 2
       },
       {
         "nome": "Contaminated Reliquary (Divine)",
         "hash": "Contaminated Reliquary (Divine)",
         "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIN5YP1KTEs9yUehzqKcH6DnYPOe",
         "categoria": "materiais",
-        "menorPreco": "R$ 160,12",
+        "menorPreco": "R$ 122,04",
         "precoMediano": "R$ 122,05",
-        "volume24h": 7
+        "volume24h": 6
       },
       {
-        "nome": "Ancient Bolt (Cosmic) C",
-        "hash": "Ancient Bolt (Cosmic) C",
-        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhCScRKSUk8yUapzqKcH22Heh-s",
+        "nome": "Eternal Armor (Cosmic) C",
+        "hash": "Eternal Armor (Cosmic) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsItfSN9HIkg9yUeh2fyCFvHt71LUng",
         "categoria": "equipamentos",
-        "menorPreco": "R$ 151,72",
-        "precoMediano": "R$ 117,49",
-        "volume24h": 1
+        "menorPreco": "R$ 119,80",
+        "precoMediano": "R$ 119,86",
+        "volume24h": 4
+      },
+      {
+        "nome": "Abyss Bracer (Celestial) C",
+        "hash": "Abyss Bracer (Celestial) C",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsIhfRNNQLyI6ykeg0evcCPhXJWKNIMs",
+        "categoria": "acessorios",
+        "menorPreco": "R$ 117,99",
+        "precoMediano": "R$ 118,97",
+        "volume24h": 4
       },
       {
         "nome": "Ancient Arrow (Cosmic) C",
@@ -550,6 +541,15 @@ export const MARKET_TABS = [
         "menorPreco": "R$ 121,64",
         "precoMediano": "R$ 71,41",
         "volume24h": 1
+      },
+      {
+        "nome": "Ethereal Ring (Cosmic) A",
+        "hash": "Ethereal Ring (Cosmic) A",
+        "icone": "eBLtYAl6ntbtQ8HLU9Nwq_spna9pYjVMElAg-FGKLvMFaUQ2uz-HsJhES9dKS088yUanzqKcH8JzrIll",
+        "categoria": "acessorios",
+        "menorPreco": "R$ 260,17",
+        "precoMediano": "R$ 69,11",
+        "volume24h": 2
       }
     ]
   }
